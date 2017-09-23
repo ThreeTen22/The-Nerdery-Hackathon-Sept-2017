@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ThreeTen22/The-Nerdery-Hackathon-Sept-2017#readme",
   "dependencies": {
+    "csv-to-array": "^1.0.2",
     "http-server": "^0.10.0"
   }
 }
