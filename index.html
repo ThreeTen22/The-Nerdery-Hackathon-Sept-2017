@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Coolest Landmarks</title>
-</head>
+    <style>
+       #map {
+         width: 100%;
+         height: 400px;
+         background-color: grey;
+       }
+    </style>
+  </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="js/bootstrap.min.js"></script>
 
-    <script>var google_API = "AIzaSyDzmFXhNt39HFf0LbBfOm0cmUQMDJq2ngU";</script>
+    <script>
+    var google_static_API = "AIzaSyDzmFXhNt39HFf0LbBfOm0cmUQMDJq2ngU";
+    var google_js_API = "AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc";
+  </script>
     	
     <div class="container">
     	<div class="row"> 
@@ -19,12 +29,28 @@
     			I AM A BOX ON A FOX
     		</div>
     	</div>
-      <div class="chicago-map">
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+      <div id="map"></div>
+      <script>
+      function initMap() {
+        var uluru = {lat: 41.878, lng: -87.629};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc&callback=initMap">
+    </script>
+<!--       <div class="chicago-map">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Chicago,IL&zoom=10&size=600x300&maptype=roadmap
 &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
 &markers=color:red%7Clabel:C%7C40.718217,-73.998284
 &key=AIzaSyDzmFXhNt39HFf0LbBfOm0cmUQMDJq2ngU">
-      </div>
+      </div> -->
     </div>
 </body>
 </html>
