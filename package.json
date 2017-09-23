@@ -1,0 +1,26 @@
+{
+  "name": "landmarked",
+  "version": "1.0.0",
+  "description": "A compass for historic landmarks in Chicago",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThreeTen22/The-Nerdery-Hackathon-Sept-2017.git"
+  },
+  "keywords": [
+    "landmark",
+    "chicago",
+    "nerdery",
+    "hackathon"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThreeTen22/The-Nerdery-Hackathon-Sept-2017/issues"
+  },
+  "homepage": "https://github.com/ThreeTen22/The-Nerdery-Hackathon-Sept-2017#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
