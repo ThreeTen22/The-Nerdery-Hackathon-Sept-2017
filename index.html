@@ -4,20 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The Coolest Landmarks</title>
-  <style>
-  #map {
-   width: 300px;
-   height: 700px;
-   background-color: grey;
- }
-</style>
-</head>
-<body>
-	<!-- SCRIPTS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-dashboard.css">
+  <link rel="stylesheet" href="css/index-page.css">
+  <title>The Coolest Landmarks</title>
+</head>
+<body>
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
   
   
@@ -38,13 +32,13 @@
 
   <div class="container-fluid">
     <div class="row">
-     <div class= "col-sm-5 sidebar">
-      <div id="map"></div>
-
-
+      <div class= "col-sm-5 sidebar">
+        <div id="map"></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc&callback=initMap">
+        </script>
       </div>
       <div class= "col-sm-7 col-sm-offset-5 main">
-     I R MAIIIIIN 
+        I R MAIIIIIN 
       </div>
     </div>
   </div>
