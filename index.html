@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Coolest Landmarks</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Coolest Landmarks</title>
+  <style>
+  #map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
+</style>
 </head>
 <body>
 	<!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>  
-    <!-- <script type="text/javascript" src='js/energy.js'></script> -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-dashboard.css">
-    <script src="js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src='js/energy.js'></script> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-dashboard.css">
+  <script src="js/bootstrap.min.js"></script>
+  
+  
+  <script>
+    var chicago_landmarks_API = "https://data.cityofchicago.org/resource/fpx9-pjqk.json";
+    var google_static_API = "AIzaSyDzmFXhNt39HFf0LbBfOm0cmUQMDJq2ngU";
+    var google_js_API = "AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc";
+  </script>
+  <!-- NAVBAR -->
+  <nav class="navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Landmarks in a Line _|\_</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- NAVBAR -->
-    <nav class="navbar-inverse navbar-fixed-top">
-	  	<div class="container-fluid">
-	  		<div class="navbar-header">
-	 			<a class="navbar-brand" href="#">Landmarks in a Line _|\_</a>
-	 		</div>
-	    </div>
-	</nav>
-
-	<div class="container-fluid">
-		<div class="row">
-			<div class= "col-sm-5 sidebar">
-				I AM A SIDERBAR
-			</div>
-			<div class= "col-sm-7 col-sm-offset-5 main">
-				 I R MAIIIIIN 
-			</div>
-		</div>
-	</div>
-	
-
-
+  <div class="container-fluid">
+    <div class="row">
+     <div class= "col-sm-5 sidebar">
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          var uluru = {lat: 41.878, lng: -87.629};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc&callback=initMap">
+      </script>
+    </div>
+    <div class= "col-sm-7 col-sm-offset-5 main">
+     I R MAIIIIIN 
+   </div>
+ </div>
+</div>	
 </body>
 </html>
