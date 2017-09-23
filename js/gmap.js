@@ -46,7 +46,11 @@ function displayMap(){
     map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
             zoom: zoomLevel,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            minZoom: zoomLevel,
+            maxZoom: zoomLevel,
+            rotateControl: false,
+            streetViewControl: false
       });
 
     var initMarker = new google.maps.Marker({
