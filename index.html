@@ -10,9 +10,8 @@
   <title>The Coolest Landmarks</title>
 </head>
 <body>
-	<!-- SCRIPTS -->
+  <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <!-- <script type="text/javascript" src='js/energy.js'></script> -->
   <script src="js/bootstrap.min.js"></script>
   
   
@@ -21,6 +20,7 @@
     var google_static_API = "AIzaSyDzmFXhNt39HFf0LbBfOm0cmUQMDJq2ngU";
     var google_js_API = "AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc";
   </script>
+
   <!-- NAVBAR -->
   <nav class="navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -32,32 +32,20 @@
 
   <div class="container-fluid">
     <div class="row">
-     <div class= "col-sm-5 sidebar">
-      <div id="map"></div>
-      <script>
-        function initMap() {
-          var uluru = {lat: 41.878, lng: -87.629};
-          var map = new google.maps.Map(document.getElementById('map'), {
-          	minZoom: 13,
-          	maxZoom: 13,
-            zoom: 13,
-            rotateControl: false,
-            streetViewControl: false,
-            center: uluru
-          });
-          var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-          });
-        }
-      </script>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc&callback=initMap">
-      </script>
+      <div class= "col-sm-5 sidebar">
+        <div id="map"></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc&callback=initMap">
+        </script>
+      </div>
+      <div class= "col-sm-7 col-sm-offset-5 main">
+        I R MAIIIIIN 
+      </div>
     </div>
-    <div class= "col-sm-7 col-sm-offset-5 main">
-     I R MAIIIIIN 
-   </div>
- </div>
-</div>	
+  </div>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5LJuWukl4_8T2gpRADr9VhyuM1AkfaXc&callback=initMap"></script>
+  <script type="text/javascript" src='js/landmarks.js'></script>
+  <script type="text/javascript" src='js/gmap.js'></script>
+
 </body>
 </html>
