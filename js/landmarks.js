@@ -1,5 +1,5 @@
 var locations = [];
-var markers = {minLat: 41.8, maxLat: 41.98, minlong: 5.34, maxLong: 20.567};
+var markers = {minLat: 41.8, maxLat: 41.98, minlong: -87.85, maxLong: -87.65};
 
 
 const getEneryData = () => {
@@ -30,7 +30,8 @@ function filterByMarkers(locations, params) {
     var hypCoord = {xValue: 0.0, yValue: 0.0};
     var dist = 0;
     for (var i = locations.length - 1; i >= 0; i--) {
-        if (((params.maxLat >= locations[i].latitude) && (locations[i].latitude >= params.minLat)) || ((params.maxLong >= locations[i].longitude) && (locations[i].longitude >= params.minLat))) {
+        //console.log(locations[i].longitude);
+        if (((params.maxLat >= locations[i].latitude) && (locations[i].latitude >= params.minLat)) && ((params.maxLong >= locations[i].longitude) && (locations[i].longitude >= params.minLat))) {
             hypCoord.xValue = locations[i].latitude;
             hypCoord.yValue = getCoordinate(markers.slope, hypCoord.xValue, markers.yInt);
             //console.log("--");
