@@ -5,7 +5,7 @@ var pos={
   lng: -87.6298  
 };
 
-var zoomLevel=10;
+var zoomLevel=13;
 
 
 //This is the initialize the map on load
