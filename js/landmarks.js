@@ -1,6 +1,6 @@
+
 var locations = [];
 var markers = {minLat: 41.8, maxLat: 41.98, minlong: -87.85, maxLong: -87.65};
-
 
 const getEneryData = () => {
     $.ajax({
@@ -8,7 +8,8 @@ const getEneryData = () => {
         url: "https://data.cityofchicago.org/resource/fpx9-pjqk.json",
         type: "GET",
         data: {
-            "$$app_token": "dAZz61L6NCJnpgbtQ7OXpToRI"
+            "$$app_token": "dAZz61L6NCJnpgbtQ7OXpToRI",
+            //"$limit": 10
         }
     }).done((data) => {
         //console.log(minMax(data));
